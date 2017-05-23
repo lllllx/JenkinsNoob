@@ -1,14 +1,15 @@
 Jenkinsfile (Declarative Pipeline)
 
 pipeline {
-    agent { docker 'python:3.5.1' }
+    //agent directive: tell Jenkins where and how to execute the Pipeline
+    agent any
     stages {
         stage('build') {
-            steps {
+           steps {
                 sh 'python --version'
+		sh 'echo "hi hi"'
             }
         }
     }
 }
-
 
