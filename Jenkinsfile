@@ -2,7 +2,8 @@ Jenkinsfile (Declarative Pipeline)
 
 pipeline {
     //agent directive: tell Jenkins where and how to execute the Pipeline
-    agent any
+    //required for all pipelines
+    agent docker{ image 'node:7-alpine'}
     stages {
         stage('build') {
            steps {
